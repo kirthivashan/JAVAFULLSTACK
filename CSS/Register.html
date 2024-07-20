@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <style>
+       .register{
+        background-color: burlywood;
+        width: 40%;
+        position: absolute;
+        margin-top: 150px;
+        margin-left: 500px;
+        border-radius: 20px;
+        border: 5px solid black;
+       }
+       .btn{
+        border: none;
+        border-radius: 20px;
+        background-color: red;
+        color: white;
+        font-size: 20px;
+        cursor: pointer;
+       }
+       .btn:hover{
+        background-color: green;
+       }
+       input{
+        border: none;
+        cursor: pointer;
+        border-radius: 15px;
+        
+       }
+    </style>
+</head>
+<body>
+    <div class="register">
+    <table width="40%" align="center">
+        <tr><th colspan="2">REGISTRATION PAGE </th></tr>
+
+
+        <tr><td>Full Name</td><td><input type="text"/></td></tr><br>
+        <tr><td>Last Name</td><td><input type="password"/></td></tr>
+        <tr><td>E-mail</td><td><input type="email"/></td></tr>
+        <tr><td>Mobile No</td><td><input type="number"/></td></tr>
+        <tr><td>D.O.B</td><td><input type="date"/></td></tr>
+        <tr><td>User Name</td><td><input type="email"/></td></tr>
+        <tr><td>Password</td><td><input type="email"/></td></tr>
+        <tr><td>Gender</td><td><input type="radio" name="gender"/>Male <input type="radio" name="gender"/>Female</td></tr>
+        <tr><td>Skills</td><td><input type="checkbox" name="cb"/>C <input type="checkbox" name="CB"/>C++ <input type="checkbox" name="CB"/>JAVA</td></tr>
+        <tr><td>City</td><td><select><option>salem</option><option>erode</option><option>namakkal</option></select></td></tr>
+        <tr><td>Address</td><td><textarea rows="5"></textarea></td></tr>
+
+        <tr><td colspan="2" align="center"><input type="submit" class="btn" value="Register"/></td></tr>
+    </table>
+</div> 
+</body>
+</html>
