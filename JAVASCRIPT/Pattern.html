@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pattern</title>
+    <script>
+        function pattern(){
+            var a=parseInt(document.getElementById("n").value);
+             var result="";
+            for(var i=1;i<=a;i++){
+                for(var j=1;j<=i;j++){
+                    result=result.concat("* ");
+                }
+                result=result.concat("<br>");
+            }
+            document.getElementById("pat").innerHTML=result;
+        
+        }
+    </script>
+</head>
+<body>
+    Enter Number of Rows : <input type="text" id="n" value="Enter a Positive number" onfocus="this.value=''">
+    <br><br>
+    <button onclick="pattern()">Submit</button>
+    
+    <div id="pat">
+
+    </div>
+</body>
+</html>

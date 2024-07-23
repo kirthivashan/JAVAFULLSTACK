@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+       function fact(){
+          var a=parseInt(document.getElementById("n1").value);
+           var value=1;
+          if(a==1 || a==0)
+          value=1;
+          else
+          for(var i=2;i<=a;i++)
+          value=value*i;
+
+         document.getElementById("Result").innerHTML="<b>Factorial of a number:"+value+"</b>";
+       }
+    </script>
+</head>
+<body>
+    Enter the number: <input type="text" id="n1" value="Enter a positive Number" onfocus="this.value=''" onblur="fact()"/>
+    <br><br>
+    <!-- <button onclick="fact()">submit</button>
+    <br><br> -->
+    <div id="Result">
+
+    </div>
+
+</body>
+</html>
