@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String</title>
+    <script>
+         function len(){
+            var s=document.getElementById("ln").value;
+            var result=s.length;
+            document.getElementById("resultd").innerHTML=result;
+         }
+         function char(){
+            var s=document.getElementById("ln").value;
+            var result1=s.charAt(2);
+            document.getElementById("resultdd").innerHTML=result1;
+         }
+         function index(){
+            var s=document.getElementById("ln").value;
+            var result1=s.at(2);
+            document.getElementById("resultddd").innerHTML=result1;
+         }
+         function charcodeat(){
+            var s=document.getElementById("ln").value;
+            var result1=s.charCodeAt(5);
+            document.getElementById("resultdddd").innerHTML=result1;
+         }
+         function stringslice(){
+            var s=document.getElementById("ln").value;
+            var result1=s.slice(2,8);
+            document.getElementById("resultddddd").innerHTML=result1;
+         }
+         function substring(){
+            var s=document.getElementById("ln").value;
+            var result1=s.substr(7,4);
+            document.getElementById("resultdddddd").innerHTML=result1;
+         }
+         function uppercase(){
+            var s=document.getElementById("ln").value;
+            var result1=s.toUpperCase();
+            document.getElementById("resultddddddd").innerHTML=result1;
+         }
+         function lowercase(){
+            var s=document.getElementById("ln").value;
+            var result1=s.toLowerCase();
+            document.getElementById("resultdddddddd").innerHTML=result1;
+         }
+    </script>
+</head>
+<body>
+    <h1>STRING FUNCTIONS</h1><br><br>
+    Enter a string:<input type="text" id="ln">
+    <br><br>
+    <button onclick="len()">Length</button><br><br>
+    <div id="resultd">
+
+    </div>
+    <button onclick="char()">charAt(index)</button>
+    <div id="resultdd">
+
+    </div><br>
+    <button onclick="index()">at()</button>
+    <div id="resultddd">
+
+    </div><br>
+    <button onclick="charcodeat()">charCodeAt()</button>
+    <div id="resultdddd">
+
+    </div><br>
+    <button onclick="stringslice()">slice()</button>
+    <div id="resultddddd">
+
+    </div><br>
+    <button onclick="substring()">substr()</button>
+    <div id="resultdddddd">
+
+    </div><br>
+    <button onclick="uppercase()">upper()</button>
+    <div id="resultddddddd">
+
+    </div><br>
+    <button onclick="lowercase()">Lower()</button>
+    <div id="resultdddddddd">
+
+    </div><br>
+
+</body>
+</html>

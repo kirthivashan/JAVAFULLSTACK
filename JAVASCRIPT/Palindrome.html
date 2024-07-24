@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Palindrome</title>
+    <script>
+        // alert("Test");
+        function Pal(){
+           var s=document.getElementById("str").value;
+           var result="";
+           let s1;
+           var i;
+           for(i=s.length-1;i>=0;i--){
+            result+=s[i];
+           }
+           if(result===s){
+              s1=("String is palindrome");
+           }else{
+            s1=("String is not palindrome");
+           }
+           document.getElementById("Result").innerHTML="<font color='red' <b>">+ s1 +"</b></font>";
+        }
+      </script>
+</head>
+<body>
+    <h1>
+        TO CHECK WHETHER A STRING IS PALINDROME OR NOT.
+    </h1>
+    <br><br>
+    Enter a String : <input type="text" id="str"/>
+    <br><br>
+    <button onclick="Pal()">Result</button>
+    <br>
+    <div id="Result">
+        
+    </div>
+</body>
+</html>

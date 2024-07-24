@@ -1,57 +1,89 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<style>
-    h1{
-        color: white;
-        background-color: black;
-        border: 2px solid yellow;
-        text-align: center;
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    h2{
+      color: red;
+      text-align: center;
     }
-.grid {
-  display: grid;
-  grid-template-columns: auto auto auto;
-  background-color: whitesmoke;
-  padding: 10px;
-  gap: 50px;
+    .container{
+    background-color: rgba(0,0,87,0.3);
+    padding: 15px 9%;
+    /* padding-bottom: 100px; */
 }
-.gr{
-  background-color: rgba(255, 255, 255, 0.8);
-  border: 1px solid black;
-  padding: 20px;
-  font-size: 30px;
-  text-align: center;
+.box-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 5px;
+    cursor: pointer;
 }
-.gr:hover::before {
-  width: 100%;
-  border-top-right-radius: 5px;
-  border-bottom-right-radius: 5px;
+.box{
+    height: 150px;
+    width: 350px;
+    margin-top: 5px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+    border-radius: 5px;
+    background: #e8dddd;
+    text-align: center;
+    padding: 10px 10px;
 }
-</style>
+.box img{
+    height: 90px;
+    width: 150px;
+    padding-left: 20px;
+    padding-top:30px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+
+
+}
+.box:hover{
+    box-shadow: 0 10px 15px rgba(0.9,0.9,0.9,0.9);
+    transform: scale(1.02);
+}
+  </style>
 </head>
 <body>
-
-<h1>Photo Gallery</h1>
-
-<div class="grid">
-  <div class="gr">
-    <img src="profile.png" width="50px" height="50px">
-  </div>
-  <div class="gr">
-    <img src="back.jpg" width="50px" height="50px">
-  </div>
-  <div class="gr"> <img src="profile.png" width="50px" height="50px">
-  </div>  
-  <div class="gr"><img src="back.jpg" width="50px" height="50px"></div>
-  <div class="gr"> <img src="profile.png" width="50px" height="50px"></div>
-  <div class="gr"><img src="back.jpg" width="50px" height="50px"></div>  
-  <div class="gr"> <img src="profile.png" width="50px" height="50px"></div>
-  <div class="gr"><img src="back.jpg" width="50px" height="50px"></div>
-  <div class="gr"> <img src="profile.png" width="50px" height="50px"></div>  
-</div>
+  <section>
+    <div class="container">
+        <h2 class="head">PHOTO GALLERY</h2>
+        <div class="box-container">
+            <div class="box">
+                <img src="https://static.vecteezy.com/system/resources/previews/023/867/293/original/reebok-logo-brand-clothes-with-name-white-symbol-design-icon-abstract-illustration-with-black-background-free-vector.jpg" alt=""></a>                
+            </div>
+            <div class="box">
+                <img src="https://c4.wallpaperflare.com/wallpaper/908/392/965/adidas-desktop-backgrounds-wallpaper-preview.jpg" alt="">
+                
+            </div>
+            <div class="box">
+                <img src="https://static.vecteezy.com/system/resources/previews/010/994/278/original/puma-logo-white-symbol-with-name-clothes-design-icon-abstract-football-illustration-with-black-background-free-vector.jpg" alt="">
+               
+            </div>
+            <div class="box">
+                <img src="https://static.vecteezy.com/system/resources/previews/010/994/236/original/nike-logo-white-with-name-clothes-design-icon-abstract-football-illustration-with-black-background-free-vector.jpg" alt="">
+            
+            </div>
+            <div class="box">
+                <img src="https://static.vecteezy.com/system/resources/previews/023/871/262/original/fila-brand-logo-symbol-white-design-clothes-fashion-illustration-with-black-background-free-vector.jpg" alt="">
+            </div>
+            <div class="box">
+                <img src="https://m.media-amazon.com/images/I/81GF4nVEPgL._AC_UY1100_.jpg" alt="">
+            </div>
+            <div class="box">
+                <img src="https://2.bp.blogspot.com/_IcwX0jqq0eQ/SjDr0-YMJOI/AAAAAAAAAKU/PD2_-RFgNEk/s320/yonex.JPG" alt="">
+            </div>
+            <div class="box">
+                <img src="https://w0.peakpx.com/wallpaper/149/676/HD-wallpaper-new-balance-black-logo-newbalance-running-shoes-sports.jpg" alt="">
+            </div>
+            <div class="box">
+                <img src="https://wallpapercave.com/wp/vHnPOeX.jpg" alt="">
+            </div>
+        </div>
+        </div>
+</section>
 
 </body>
 </html>
-
-

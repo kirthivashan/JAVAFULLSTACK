@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prime</title>
+    <script>
+        // alert("test")
+        function Prime(){
+            var s=parseInt(document.getElementById("pm").value);
+            // alert("test");
+            var flag=0;
+            var result="";
+            if(s==1 || s==0){
+                result="";
+                result=result.concat("neither prime nor composite number");
+            }
+            else if(s>1){
+                for(var i=2;i<s;i++){
+                    if(s%i==0){
+                        flag=1;
+                        break;
+                    }
+                }
+            }
+            if(flag==1){
+                result=result.concat("Not prime number");
+            }else{
+                result=result.concat("prime number");
+            }
+            document.getElementById("Resultdiv").innerHTML=result;
+        }
+    </script>
+</head>
+<body>
+    <h1>Prime Number</h1>
+    <br>
+    Enter a number : <input type="text" id="pm">
+    <br><br>
+    <button onclick="Prime()" id="pnum">Submit</button>
+    <div id="Resultdiv">
+
+    </div>
+</body>
+</html>
