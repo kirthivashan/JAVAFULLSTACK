@@ -1,0 +1,12 @@
+#detail{
+    font-size: 20px;
+    font-weight: bold;
+    padding-top: 60px;
+}
+input[type=text]{
+    width: 60%;
+    background-color: white;
+    border: 1px solid black;
+    outline: none;
+    border-radius: 10px;
+}
