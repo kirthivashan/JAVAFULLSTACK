@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component,Input } from '@angular/core';
+import { DetailsComponent } from '../details/details.component';
 
 @Component({
   selector: 'app-data',
@@ -6,5 +7,6 @@ import { Component } from '@angular/core';
   styleUrl: './data.component.css'
 })
 export class DataComponent {
+
 
 }

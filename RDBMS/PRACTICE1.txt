@@ -1,0 +1,218 @@
+create table tbl_emp(empid number(5),empname varchar2(20),empsalary number(6));
+desc tbl_emp;
+insert into tbl_emp values(101,'kirthi',40000);
+select * from tbl_emp;
+insert into tbl_emp values(102,'kumar',30000);
+insert into tbl_emp values(103,'raj',25000);
+insert into tbl_emp values(104,'ajay',35000);
+select * from tbl_emp;
+select empid,empsalary from tbl_emp;
+insert into tbl_emp values(101,'jai',40000);
+select empid from tbl_emp;
+select distinct empid from tbl_emp;
+commit
+select * from tbl_emp;
+select * from tbl_emp where empid=101;
+select * from tbl_emp where empsalary >30000;
+select * from tbl_emp where empid!=101;
+select * from tbl_emp where empid<>101;
+update tbl_emp set empsalary=33000 where empid=104;
+select * from tbl_emp;
+commit
+update tbl_emp set empsalary=33000,empname='krish' where empid=104;
+select * from tbl_emp;
+delete from tbl_emp where empid=101;
+select * from tbl_emp;
+commit
+select * from tbl_emp where empid in (101,102,103);
+select * from tbl_emp where empid not in (101,102,103);
+
+
+////////////output///////////////
+create table tbl_emp(empid number(5),empname varchar2(20),empsalary number(6))
+Table created.
+Statement 2
+desc tbl_emp
+TABLE TBL_EMP
+Column	Null?	Type
+EMPID	 - 	NUMBER(5,0)
+EMPNAME	 - 	VARCHAR2(20)
+EMPSALARY	 - 	NUMBER(6,0)
+
+3 rows selected.
+Statement 3
+insert into tbl_emp values(101,'kirthi',40000)
+1 row(s) inserted.
+Statement 4
+select * from tbl_emp
+EMPID	EMPNAME	EMPSALARY
+101	kirthi	40000
+Statement 5
+insert into tbl_emp values(102,'kumar',30000)
+1 row(s) inserted.
+Statement 6
+insert into tbl_emp values(103,'raj',25000)
+1 row(s) inserted.
+Statement 7
+insert into tbl_emp values(104,'ajay',35000)
+1 row(s) inserted.
+Statement 8
+select * from tbl_emp
+EMPID	EMPNAME	EMPSALARY
+102	kumar	30000
+103	raj	25000
+104	ajay	35000
+101	kirthi	40000
+
+4 rows selected.
+Statement 9
+select empid,empsalary from tbl_emp
+EMPID	EMPSALARY
+102	30000
+103	25000
+104	35000
+101	40000
+
+4 rows selected.
+Statement 10
+insert into tbl_emp values(101,'jai',40000)
+1 row(s) inserted.
+Statement 11
+select empid from tbl_emp
+EMPID
+102
+103
+104
+101
+101
+
+5 rows selected.
+Statement 12
+select distinct empid from tbl_emp
+EMPID
+104
+103
+101
+102
+
+4 rows selected.
+Statement 13
+commit
+Statement processed.
+Statement 14
+select * from tbl_emp
+EMPID	EMPNAME	EMPSALARY
+102	kumar	30000
+103	raj	25000
+104	ajay	35000
+101	jai	40000
+101	kirthi	40000
+
+5 rows selected.
+Statement 15
+select * from tbl_emp where empid=101
+EMPID	EMPNAME	EMPSALARY
+101	jai	40000
+101	kirthi	40000
+
+2 rows selected.
+Statement 16
+select * from tbl_emp where empsalary >30000
+EMPID	EMPNAME	EMPSALARY
+104	ajay	35000
+101	jai	40000
+101	kirthi	40000
+
+3 rows selected.
+Statement 17
+select * from tbl_emp where empid!=101
+EMPID	EMPNAME	EMPSALARY
+102	kumar	30000
+103	raj	25000
+104	ajay	35000
+
+3 rows selected.
+Statement 18
+select * from tbl_emp where empid <>=101
+ORA-00936: missing expression
+More Details: https://docs.oracle.com/error-help/db/ora-00936
+Statement 19
+select * from tbl_emp where empid<>=101
+ORA-00936: missing expression
+More Details: https://docs.oracle.com/error-help/db/ora-00936
+Statement 20
+select * from tbl_emp where empid<>101
+EMPID	EMPNAME	EMPSALARY
+102	kumar	30000
+103	raj	25000
+104	ajay	35000
+
+3 rows selected.
+Statement 21
+select * from tbl_emp where empid!=101
+EMPID	EMPNAME	EMPSALARY
+102	kumar	30000
+103	raj	25000
+104	ajay	35000
+
+3 rows selected.
+Statement 22
+update tbl_emp set empsalary=33000 where empid=104
+1 row(s) updated.
+Statement 23
+select * from tbl_emp
+EMPID	EMPNAME	EMPSALARY
+102	kumar	30000
+103	raj	25000
+104	ajay	33000
+101	jai	40000
+101	kirthi	40000
+
+5 rows selected.
+Statement 24
+commit 
+Statement processed.
+Statement 25
+update tbl_emp set empsalary=33000,empname="krish" where empid=104
+ORA-00904: "krish": invalid identifier 
+
+
+More Details: https://docs.oracle.com/error-help/db/ora-00904
+Statement 26
+update tbl_emp set empsalary=33000,empname='krish' where empid=104
+1 row(s) updated.
+Statement 27
+select * from tbl_emp
+EMPID	EMPNAME	EMPSALARY
+102	kumar	30000
+103	raj	25000
+104	krish	33000
+101	jai	40000
+101	kirthi	40000
+
+5 rows selected.
+Statement 28
+delete from tbl_emp where empid=101
+2 row(s) deleted.
+Statement 29
+select * from tbl_emp
+EMPID	EMPNAME	EMPSALARY
+102	kumar	30000
+103	raj	25000
+104	krish	33000
+
+3 rows selected.
+Statement 30
+commit
+Statement processed.
+Statement 31
+select * from tbl_emp where empid in (101,102,103)
+EMPID	EMPNAME	EMPSALARY
+102	kumar	30000
+103	raj	25000
+
+2 rows selected.
+Statement 32
+select * from tbl_emp where empid not in (101,102,103)
+EMPID	EMPNAME	EMPSALARY
+104	krish	33000

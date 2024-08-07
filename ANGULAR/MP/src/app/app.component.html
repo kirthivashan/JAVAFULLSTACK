@@ -1,0 +1,59 @@
+
+    <div id="header"><h1>
+        BOOK MANAGEMENT SYSTEM
+      </h1>
+      </div>
+      <br>
+      <form #myForm="ngForm"> 
+            <div id="side1">
+                <div id="s1">
+                    Book Id<br>
+                    <input type="text"  name="bookId"  #bookId="ngModel" ngModel required pattern="[0-9]+"/>
+                <div *ngIf="bookId.touched">
+                        <div *ngIf="bookId.errors?.['required']">
+                        <b style="color:blue;">Employee Id Required.</b>
+                        </div>
+                        <div *ngIf="bookId.errors?.['pattern']">
+                        <b style="color: blue;">Invalid Employee Id.</b>
+                        </div>
+                    </div>
+
+                    <br><br>
+                    Book Name<br>
+                    <input type="text" name="bookName" #bookName="ngModel" ngModel required>
+                    <br><br>
+                    Book Author<br>
+                    <input type="text" name="bookAuthor" #bookAuthor="ngModel" ngModel required>
+                    <br><br><br><br>
+                    <button class="btn btn-success" (click)="insertEmployee(myForm.value)">
+                        Insert 
+                    </button>
+                &nbsp;&nbsp;
+                    <button class="btn btn-primary" (click)="updateEmployee(myForm.value)" >
+                        Update 
+                    </button>&nbsp;&nbsp;
+                    <button class="btn btn-danger" (click)="deleteEmployee(myForm.value)">
+                        Delete 
+                    </button>&nbsp;&nbsp;
+                    <button class="btn btn-warning" (click)="findEmployee(myForm.value)">
+                        Find 
+                    </button>
+                    &nbsp;&nbsp;
+                    <button class="btn btn-info" (click)="findAllEmployee()" >
+                        Find All
+                    </button>
+
+                </div>
+                <div id="s2">
+                <table style="border: 1px solid black;">
+                    <tr><th colspan="3">BOOK DETAILS</th></tr>
+                    <tr><th>BOOK ID</th>
+                    <th>BOOK NAME</th>
+                    <th>BOOK AUTHOR</th>  
+                    </tr>
+                </table>
+            
+                </div>
+            
+            </div>
+      </form>    

@@ -1,0 +1,242 @@
+//assignment questions
+
+create table tbl_client(clino varchar(10),name varchar2(20),city varchar2(20),pincode number(8),due number(10));
+desc tbl_client;
+insert into tbl_client values('C00001','SMITHAJAIN','Mumbai',400054,15000);
+select * from tbl_client;
+
+                                                         ASSSIGNMENT -1
+
+
+insert into tbl_client values('C00002','vandana rao','chennai',780001,0);
+insert into tbl_client values('C00003','prem pujari','Mumbai',400057,5000);
+insert into tbl_client values('C00004','basu nath','Mumbai',400056,0);
+insert into tbl_client values('C00005','ravi shankar','delhi',100001,2000);
+insert into tbl_client values('C00006','roopa','Mumbai',400050,0);
+select * from tbl_client;
+delete from tbl_client where clino='C00002';
+insert into tbl_client values('C00002','vandana rao','chennai',780001,0);
+select * from tbl_client;
+
+select * from tbl_client where due=0;
+
+update tbl_client set city='jaipur' where clino='C00004';
+select * from tbl_client;
+
+select * from tbl_client where city='Mumbai';
+create table sale_order(ono varchar(8),odate date,clino varchar(8),sno varchar(8),ddate date,ostatus varchar2(20));
+desc sale_order;
+insert into sale_order values('O19001','12-Jan-13','C00001','S00001','20-Jan-13','In process');
+select * from sale_order;
+insert into sale_order values('O19002','25-Jan-13','C00002','S00002','27-Jan-13','cancelled');
+insert into sale_order values('O46865','18-Feb-13','C00003','S00003','20-Feb-13','fulfilled');
+insert into sale_order values('O19003','03-Apr-13','C00001','S00001','07-Apr-13','fulfilled');
+insert into sale_order values('O46866','20-may-13','C00004','S00002','07-Apr-13','cancelled');
+insert into sale_order values('O19008','24-may-13','C00005','S00004','26-May-13','In proces');
+select * from sale_order;
+select * from sale_order ;
+
+
+//////////////////////output//////////////////////////////////////////
+create table tbl_client(clino number(6),name varchar2(20),city varchar2(20),pincode number(8),due number(10))
+Table created.
+Statement 2
+desc tbl_client
+TABLE TBL_CLIENT
+Column	Null?	Type
+CLINO	 - 	NUMBER(6,0)
+NAME	 - 	VARCHAR2(20)
+CITY	 - 	VARCHAR2(20)
+PINCODE	 - 	NUMBER(8,0)
+DUE	 - 	NUMBER(10,0)
+
+5 rows selected.
+Statement 3
+insert into tbl_client values(C00001,'SMITHA JAIN','Mumbai',400054,15000)
+ORA-00984: column not allowed here 
+
+
+More Details: https://docs.oracle.com/error-help/db/ora-00984
+Statement 4
+insert into tbl_client values(C00001,'SMITHAJAIN','Mumbai',400054,15000)
+ORA-00984: column not allowed here 
+
+
+More Details: https://docs.oracle.com/error-help/db/ora-00984
+Statement 5
+insert into tbl_client values('C00001','SMITHAJAIN','Mumbai',400054,15000)
+ORA-01722: invalid number ORA-06512: at "SYS.DBMS_SQL", line 1721
+
+More Details: https://docs.oracle.com/error-help/db/ora-01722
+Statement 6
+insert into tbl_client values('C00001','SMITHAJAIN','Mumbai',400054,15000)
+ORA-01722: invalid number ORA-06512: at "SYS.DBMS_SQL", line 1721
+
+More Details: https://docs.oracle.com/error-help/db/ora-01722
+Statement 7
+insert into tbl_client values('C00001','SMITHAJAIN','Mumbai','400054','15000')
+ORA-01722: invalid number ORA-06512: at "SYS.DBMS_SQL", line 1721
+
+More Details: https://docs.oracle.com/error-help/db/ora-01722
+Statement 8
+insert into tbl_client values(C00001,'SMITHAJAIN','Mumbai',400054,15000)
+ORA-00984: column not allowed here 
+
+
+More Details: https://docs.oracle.com/error-help/db/ora-00984
+Statement 9
+insert into tbl_client values('C00001','SMITHAJAIN','Mumbai',400054,15000)
+ORA-01722: invalid number ORA-06512: at "SYS.DBMS_SQL", line 1721
+
+More Details: https://docs.oracle.com/error-help/db/ora-01722
+Statement 10
+insert into tbl_client values('C00001','SMITHAJAIN','Mumbai',400054,15000)
+ORA-01722: invalid number ORA-06512: at "SYS.DBMS_SQL", line 1721
+
+More Details: https://docs.oracle.com/error-help/db/ora-01722
+Statement 11
+desc tbl_client
+TABLE TBL_CLIENT
+Column	Null?	Type
+CLINO	 - 	NUMBER(6,0)
+NAME	 - 	VARCHAR2(20)
+CITY	 - 	VARCHAR2(20)
+PINCODE	 - 	NUMBER(8,0)
+DUE	 - 	NUMBER(10,0)
+
+5 rows selected.
+Statement 12
+create table tbl_client(clino varchar(10),name varchar2(20),city varchar2(20),pincode number(8),due number(10))
+ORA-00955: name is already used by an existing object 
+
+
+More Details: https://docs.oracle.com/error-help/db/ora-00955
+Statement 13
+drop table tbl_client
+Table dropped.
+Statement 14
+create table tbl_client(clino varchar(10),name varchar2(20),city varchar2(20),pincode number(8),due number(10))
+Table created.
+Statement 15
+desc tbl_client
+TABLE TBL_CLIENT
+Column	Null?	Type
+CLINO	 - 	VARCHAR2(10)
+NAME	 - 	VARCHAR2(20)
+CITY	 - 	VARCHAR2(20)
+PINCODE	 - 	NUMBER(8,0)
+DUE	 - 	NUMBER(10,0)
+
+5 rows selected.
+Statement 16
+insert into tbl_client values('C00001','SMITHAJAIN','Mumbai',400054,15000)
+1 row(s) inserted.
+Statement 17
+select * from tbl_client
+CLINO	NAME	CITY	PINCODE	DUE
+C00001	SMITHAJAIN	Mumbai	400054	15000
+Statement 18
+insert into tbl_client values('C00002','vandana rao','chennai',780001,0)
+1 row(s) inserted.
+Statement 19
+insert into tbl_client values('C00002','prem pujari','Mumbai',400057,5000)
+1 row(s) inserted.
+Statement 20
+insert into tbl_client values('C00004','basu nath','Mumbai',400056,0)
+1 row(s) inserted.
+Statement 21
+insert into tbl_client values('C00005','ravi shankar','delhi',100001,2000)
+1 row(s) inserted.
+Statement 22
+insert into tbl_client values('C00006','roopa','Mumbai',400050,0)
+1 row(s) inserted.
+Statement 23
+select * from tbl_client
+CLINO	NAME	CITY	PINCODE	DUE
+C00001	SMITHAJAIN	Mumbai	400054	15000
+C00002	vandana rao	chennai	780001	0
+C00002	prem pujari	Mumbai	400057	5000
+C00004	basu nath	Mumbai	400056	0
+C00005	ravi shankar	delhi	100001	2000
+C00006	roopa	Mumbai	400050	0
+
+6 rows selected.
+Statement 24
+insert into tbl_client values('C00003','prem pujari','Mumbai',400057,5000)
+1 row(s) inserted.
+Statement 25
+select * from tbl_client
+CLINO	NAME	CITY	PINCODE	DUE
+C00001	SMITHAJAIN	Mumbai	400054	15000
+C00002	vandana rao	chennai	780001	0
+C00002	prem pujari	Mumbai	400057	5000
+C00004	basu nath	Mumbai	400056	0
+C00005	ravi shankar	delhi	100001	2000
+C00006	roopa	Mumbai	400050	0
+C00003	prem pujari	Mumbai	400057	5000
+
+7 rows selected.
+Statement 26
+delete from tbl_client where clin0='C00002'
+ORA-00904: "CLIN0": invalid identifier 
+
+
+More Details: https://docs.oracle.com/error-help/db/ora-00904
+Statement 27
+delete from tbl_client where clino='C00002'
+2 row(s) deleted.
+Statement 28
+select * from tbl_client
+CLINO	NAME	CITY	PINCODE	DUE
+C00001	SMITHAJAIN	Mumbai	400054	15000
+C00004	basu nath	Mumbai	400056	0
+C00005	ravi shankar	delhi	100001	2000
+C00006	roopa	Mumbai	400050	0
+C00003	prem pujari	Mumbai	400057	5000
+
+5 rows selected.
+Statement 29
+insert into tbl_client values('C00002','vandana rao','chennai',780001,0)
+1 row(s) inserted.
+Statement 30
+select * from tbl_client
+CLINO	NAME	CITY	PINCODE	DUE
+C00001	SMITHAJAIN	Mumbai	400054	15000
+C00004	basu nath	Mumbai	400056	0
+C00005	ravi shankar	delhi	100001	2000
+C00006	roopa	Mumbai	400050	0
+C00003	prem pujari	Mumbai	400057	5000
+C00002	vandana rao	chennai	780001	0
+
+6 rows selected.
+Statement 31
+select * from tbl_client where due=0
+CLINO	NAME	CITY	PINCODE	DUE
+C00004	basu nath	Mumbai	400056	0
+C00006	roopa	Mumbai	400050	0
+C00002	vandana rao	chennai	780001	0
+
+3 rows selected.
+Statement 32
+update tbl_client set city='jaipur' where clino='C00004'
+1 row(s) updated.
+Statement 33
+select * from tbl_client
+CLINO	NAME	CITY	PINCODE	DUE
+C00001	SMITHAJAIN	Mumbai	400054	15000
+C00004	basu nath	jaipur	400056	0
+C00005	ravi shankar	delhi	100001	2000
+C00006	roopa	Mumbai	400050	0
+C00003	prem pujari	Mumbai	400057	5000
+C00002	vandana rao	chennai	780001	0
+
+6 rows selected.
+Statement 34
+select * from tbl_client where city='mumbai'
+no data found
+Statement 35
+select * from tbl_client where city='Mumbai'
+CLINO	NAME	CITY	PINCODE	DUE
+C00001	SMITHAJAIN	Mumbai	400054	15000
+C00006	roopa	Mumbai	400050	0
+C00003	prem pujari	Mumbai	400057	5000

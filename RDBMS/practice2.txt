@@ -1,0 +1,431 @@
+                                                          practice.
+
+create table tbl_empp(empid number(5),empname varchar2(20),empsalary number(8));
+desc tbl_empp;
+select * from tbl_empp;
+truncate table tbl_empp;
+insert into tbl_empp values(101,'kirthi',5000);
+insert into tbl_empp values(102,'kumar',2000);
+insert into tbl_empp values(103,'ajay',3000);
+insert into tbl_empp values(104,'babu',4000);
+insert into tbl_empp values(105,'kiran',5000);
+insert into tbl_empp values(106,'mohan',7000);
+insert into tbl_empp values(107,'naga',9000);
+select * from tbl_empp;
+select * from tbl_empp where empsalary between 3000 and 7000;
+select * from tbl_empp where empsalary not between 3000 and 7000;
+select * from tbl_empp where empsalary >=4000 and empid in(101,103);
+select * from tbl_empp where empsalary>=4000 or empid in (101,103);
+select * from tbl_empp where empname like 'k%';
+select * from tbl_empp where empname like '_a%';
+select * from tbl_empp where empname not like 'k%';
+select * from tbl_empp where empname like '%u%';
+select * from tbl_empp where empname like '%i';
+insert into  tbl_empp (empid,empsalary) values (108,6000);
+select * from tbl_empp;
+select * from tbl_empp where empname is null;
+select * from tbl_empp where empname is  not null;
+////////output ////////////
+create table tbl_empp(empid number(5),empname varchar2(20),empsalary number(8))
+Table created.
+Statement 2
+desc tbl_empp
+TABLE TBL_EMPP
+Column	Null?	Type
+EMPID	 - 	NUMBER(5,0)
+EMPNAME	 - 	VARCHAR2(20)
+EMPSALARY	 - 	NUMBER(8,0)
+
+3 rows selected.
+Statement 3
+insert into tbl_empp values(101,'kirthi',5000)
+1 row(s) inserted.
+Statement 4
+insert into tbl_empp values(102,'kumar',5000)
+1 row(s) inserted.
+Statement 5
+insert into tbl_empp values(103,'ajay',5000)
+1 row(s) inserted.
+Statement 6
+insert into tbl_empp values(104,'babu',5000)
+1 row(s) inserted.
+Statement 7
+insert into tbl_empp values(105,'kiran',5000)
+1 row(s) inserted.
+Statement 8
+insert into tbl_empp values(106,'mohan',5000)
+1 row(s) inserted.
+Statement 9
+insert into tbl_empp values(107,'naga',5000)
+1 row(s) inserted.
+Statement 10
+select * from tbl_empp
+EMPID	EMPNAME	EMPSALARY
+101	kirthi	5000
+102	kumar	5000
+103	ajay	5000
+104	babu	5000
+105	kiran	5000
+106	mohan	5000
+107	naga	5000
+
+7 rows selected.
+Statement 11
+truncate table tbl_empp
+Table truncated.
+Statement 12
+select * from tbl_empp
+no data found
+Statement 13
+insert into tbl_empp values(101,'kirthi',5000)
+1 row(s) inserted.
+Statement 14
+insert into tbl_empp values(102,'kumar',2000)
+1 row(s) inserted.
+Statement 15
+insert into tbl_empp values(103,'ajay',3000)
+1 row(s) inserted.
+Statement 16
+insert into tbl_empp values(104,'babu',4000)
+1 row(s) inserted.
+Statement 17
+insert into tbl_empp values(105,'kiran',5000)
+1 row(s) inserted.
+Statement 18
+insert into tbl_empp values(106,'mohan',7000)
+1 row(s) inserted.
+Statement 19
+insert into tbl_empp values(107,'naga',9000)
+1 row(s) inserted.
+Statement 20
+select * from tbl_empp
+EMPID	EMPNAME	EMPSALARY
+101	kirthi	5000
+102	kumar	2000
+103	ajay	3000
+104	babu	4000
+105	kiran	5000
+106	mohan	7000
+107	naga	9000
+
+7 rows selected.
+Statement 21
+select * from tbl_empp where salary between 3000 and 7000
+ORA-00904: "SALARY": invalid identifier
+More Details: https://docs.oracle.com/error-help/db/ora-00904
+Statement 22
+select * from tbl_empp where empsalary between 3000 and 7000
+EMPID	EMPNAME	EMPSALARY
+101	kirthi	5000
+103	ajay	3000
+104	babu	4000
+105	kiran	5000
+106	mohan	7000
+
+5 rows selected.
+Statement 23
+select * from tbl_empp where empsalary not between 3000 and 7000
+EMPID	EMPNAME	EMPSALARY
+102	kumar	2000
+107	naga	9000
+
+2 rows selected.
+Statement 24
+select * from tbl_empp where empsalary >=4000 and empid in(101,103)
+EMPID	EMPNAME	EMPSALARY
+101	kirthi	5000
+Statement 25
+select * from tbl_empp where empsalary>=4000 or empid(101,103)
+ORA-00920: invalid relational operator
+More Details: https://docs.oracle.com/error-help/db/ora-00920
+Statement 26
+select * from tbl_empp where empsalary >=4000 and empid in(101,103)
+EMPID	EMPNAME	EMPSALARY
+101	kirthi	5000
+Statement 27
+select * from tbl_empp where empsalary>=4000 or empid in (101,103)
+EMPID	EMPNAME	EMPSALARY
+101	kirthi	5000
+103	ajay	3000
+104	babu	4000
+105	kiran	5000
+106	mohan	7000
+107	naga	9000
+
+6 rows selected.
+Statement 28
+select * from tbl_empp where empname like 'k%'
+EMPID	EMPNAME	EMPSALARY
+101	kirthi	5000
+102	kumar	2000
+105	kiran	5000
+
+3 rows selected.
+Statement 29
+select * from tbl_empp where empname like '_a%'
+EMPID	EMPNAME	EMPSALARY
+104	babu	4000
+107	naga	9000
+
+2 rows selected.
+Statement 30
+select * from tbl_empp where empname not like 'k%'
+EMPID	EMPNAME	EMPSALARY
+103	ajay	3000
+104	babu	4000
+106	mohan	7000
+107	naga	9000
+
+4 rows selected.
+Statement 31
+select * from tbl_empp where empname like '%u%'
+EMPID	EMPNAME	EMPSALARY
+102	kumar	2000
+104	babu	4000
+
+2 rows selected.
+Statement 32
+select * from tbl_empp where empname like '%i'
+EMPID	EMPNAME	EMPSALARY
+101	kirthi	5000
+Statement 33
+insert into  tbl_empp (empid,empsalry) values (108,6000)
+ORA-00904: "EMPSALRY": invalid identifier 
+
+
+More Details: https://docs.oracle.com/error-help/db/ora-00904
+Statement 34
+insert into  tbl_empp (empid,empsalary) values (108,6000)
+1 row(s) inserted.
+Statement 35
+select * from tbl_empp
+EMPID	EMPNAME	EMPSALARY
+101	kirthi	5000
+102	kumar	2000
+103	ajay	3000
+104	babu	4000
+105	kiran	5000
+106	mohan	7000
+107	naga	9000
+108	 - 	6000
+
+8 rows selected.
+Statement 36
+select * from tbl_empp where ename is null
+ORA-00904: "ENAME": invalid identifier
+More Details: https://docs.oracle.com/error-help/db/ora-00904
+Statement 37
+select * from tbl_empp where empname is null
+EMPID	EMPNAME	EMPSALARY
+108	 - 	6000
+Statement 38
+select * from tbl_empp where empname is  not null
+EMPID	EMPNAME	EMPSALARY
+101	kirthi	5000
+102	kumar	2000
+103	ajay	3000
+104	babu	4000
+105	kiran	5000
+106	mohan	7000
+107	naga	9000
+
+7 rows selected.
+///////////////////////////////////////////////////////////
+
+/////////////p2/////////////////
+create table tbl_empp1(empid number(5),empname varchar2(20),empsalary number(8))
+Table created.
+Statement 48
+desc tbl_empp
+ORA-20001: object TBL_EMPP does not exist
+More Details: https://docs.oracle.com/error-help/db/ora-20001
+Statement 49
+desc tbl_empp1
+TABLE TBL_EMPP1
+Column	Null?	Type
+EMPID	 - 	NUMBER(5,0)
+EMPNAME	 - 	VARCHAR2(20)
+EMPSALARY	 - 	NUMBER(8,0)
+
+3 rows selected.
+Statement 50
+insert into tbl_empp1 values(101,'kirthi',5000)
+1 row(s) inserted.
+Statement 51
+insert into tbl_empp1 values(102,'kumar',2000)
+1 row(s) inserted.
+Statement 52
+insert into tbl_empp1 values(103,'ajay',3000)
+1 row(s) inserted.
+Statement 53
+insert into tbl_empp1 values(104,'babu',4000)
+1 row(s) inserted.
+Statement 54
+insert into tbl_empp1 values(105,'kiran',5000)
+1 row(s) inserted.
+Statement 55
+insert into tbl_empp1 values(106,'mohan',7000)
+1 row(s) inserted.
+Statement 56
+insert into tbl_empp1 values(107,'naga',9000)
+1 row(s) inserted.
+Statement 57
+select * from tbl_empp1
+EMPID	EMPNAME	EMPSALARY
+101	kirthi	5000
+102	kumar	2000
+103	ajay	3000
+104	babu	4000
+105	kiran	5000
+106	mohan	7000
+107	naga	9000
+
+7 rows selected.
+Statement 58
+select * from tbl_empp1 order by eid desc
+ORA-00904: "EID": invalid identifier
+More Details: https://docs.oracle.com/error-help/db/ora-00904
+Statement 59
+select * from tbl_empp1 order by empid desc
+EMPID	EMPNAME	EMPSALARY
+107	naga	9000
+106	mohan	7000
+105	kiran	5000
+104	babu	4000
+103	ajay	3000
+102	kumar	2000
+101	kirthi	5000
+
+7 rows selected.
+Statement 60
+select * from tbl_empp1 order by empid asc
+EMPID	EMPNAME	EMPSALARY
+101	kirthi	5000
+102	kumar	2000
+103	ajay	3000
+104	babu	4000
+105	kiran	5000
+106	mohan	7000
+107	naga	9000
+
+7 rows selected.
+Statement 61
+select * from tbl_empp1 order by empname asc
+EMPID	EMPNAME	EMPSALARY
+103	ajay	3000
+104	babu	4000
+105	kiran	5000
+101	kirthi	5000
+102	kumar	2000
+106	mohan	7000
+107	naga	9000
+
+7 rows selected.
+Statement 62
+alter table tbl_empp1 add doj date
+Table altered.
+Statement 63
+desc tbl_empp1
+TABLE TBL_EMPP1
+Column	Null?	Type
+EMPID	 - 	NUMBER(5,0)
+EMPNAME	 - 	VARCHAR2(20)
+EMPSALARY	 - 	NUMBER(8,0)
+DOJ	 - 	DATE
+
+4 rows selected.
+Statement 64
+alter table tbl_empp1 drop column doj
+Table altered.
+Statement 65
+select * from tbl_empp1
+EMPID	EMPNAME	EMPSALARY
+101	kirthi	5000
+102	kumar	2000
+103	ajay	3000
+104	babu	4000
+105	kiran	5000
+106	mohan	7000
+107	naga	9000
+
+7 rows selected.
+Statement 66
+alter table tbl_empp1 modify empsalary number(10)
+Table altered.
+Statement 67
+desc tbl_empp1
+TABLE TBL_EMPP1
+Column	Null?	Type
+EMPID	 - 	NUMBER(5,0)
+EMPNAME	 - 	VARCHAR2(20)
+EMPSALARY	 - 	NUMBER(10,0)
+
+3 rows selected.
+Statement 68
+alter table tbl_empp1 modify empsalary number(5)
+ORA-01440: column to be modified must be empty to decrease precision or scale 
+
+
+More Details: https://docs.oracle.com/error-help/db/ora-01440
+Statement 69
+alter table tbl_empp1 rename empsalary to esalary
+ORA-14155: missing PARTITION, PARTITIONS, SUBPARTITION, or SUBPARTITIONS keyword 
+
+
+More Details: https://docs.oracle.com/error-help/db/ora-14155
+Statement 70
+alter table tbl_empp1 rename column empsalary to esalary
+Table altered.
+Statement 71
+desc tbl_empp1
+TABLE TBL_EMPP1
+Column	Null?	Type
+EMPID	 - 	NUMBER(5,0)
+EMPNAME	 - 	VARCHAR2(20)
+ESALARY	 - 	NUMBER(10,0)
+
+3 rows selected.
+Statement 72
+rename tb1_empp1 to tb1_employee
+ORA-04043: object TB1_EMPP1 does not exist 
+
+
+More Details: https://docs.oracle.com/error-help/db/ora-04043
+Statement 73
+rename tbl_empp1 to tb1_employee
+Statement processed.
+Statement 74
+desc tb1_employee
+TABLE TB1_EMPLOYEE
+Column	Null?	Type
+EMPID	 - 	NUMBER(5,0)
+EMPNAME	 - 	VARCHAR2(20)
+ESALARY	 - 	NUMBER(10,0)
+
+3 rows selected.
+Statement 75
+drop table tbl_employee
+ORA-00942: table or view does not exist 
+
+
+More Details: https://docs.oracle.com/error-help/db/ora-00942
+Statement 76
+desc tbl_employee
+ORA-20001: object TBL_EMPLOYEE does not exist
+More Details: https://docs.oracle.com/error-help/db/ora-20001
+Statement 77
+flashback table tbl_employee to before drop
+ORA-38305: object not in RECYCLE BIN 
+
+
+More Details: https://docs.oracle.com/error-help/db/ora-38305
+Statement 78
+flashback table
+ORA-00921: unexpected end of SQL command 
+
+
+More Details: https://docs.oracle.com/error-help/db/ora-00921
+Statement 79
+flashback table tbl_employee to before drop
+ORA-38305: object not in RECYCLE BIN 
+////////////////////////////////////////////////////////////

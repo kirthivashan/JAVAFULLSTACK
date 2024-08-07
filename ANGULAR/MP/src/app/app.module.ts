@@ -1,19 +1,15 @@
 import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
+import { BrowserModule, provideClientHydration } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { DetailsComponent } from './details/details.component';
-import { DataComponent } from './data/data.component';
 import { FormsModule } from '@angular/forms';
+import { EmployeeserviceService } from './employeeservice.service';
 import { HttpClientModule } from '@angular/common/http';
-import { BookstoreService } from './bookstore.service';
 
 @NgModule({
   declarations: [
-    AppComponent,
-    DetailsComponent,
-    DataComponent
+    AppComponent
   ],
   imports: [
     BrowserModule,
@@ -22,8 +18,9 @@ import { BookstoreService } from './bookstore.service';
     HttpClientModule
   ],
   providers: [
-    BookstoreService
+    provideClientHydration(),
+    EmployeeserviceService
   ],
-  bootstrap: [AppComponent],
+  bootstrap: [AppComponent]
 })
 export class AppModule { }
